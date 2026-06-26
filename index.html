@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aryan Sinha - Computer Science Student, Full Stack Developer & Problem Solver">
+  <title>Aryan Sinha | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Particle Background Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <p class="loader-text">Loading Portfolio...</p>
+    </div>
+  </div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Navigation -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>AS<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero section" id="home">
+      <div class="hero-bg">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+      </div>
+      <div class="container hero-container">
+        <div class="hero-content reveal-left">
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-name">Aryan Sinha</h1>
+          <div class="hero-titles">
+            <span class="hero-title-item">B.Tech Student</span>
+            <span class="hero-title-divider">|</span>
+            <span class="hero-title-item">Full Stack Developer</span>
+            <span class="hero-title-divider">|</span>
+            <span class="hero-title-item">Problem Solver</span>
+          </div>
+          <p class="hero-typing">
+            I'm a <span class="typing-text" id="typingText"></span><span class="typing-cursor">|</span>
+          </p>
+          <p class="hero-intro">
+            I am a passionate Computer Science student focused on web development, database systems, and problem-solving. I enjoy building practical solutions that create real-world impact.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fas fa-code"></i> View Projects
+            </a>
+            <a href="resume.pdf" class="btn btn-outline" download>
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+          </div>
+          <div class="hero-social">
+            <a href="https://github.com/AryanSinha007/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/aryan-sinha-250ab936b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://leetcode.com/u/aryan_sinha_07//" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
+              <i class="fas fa-code"></i>
+            </a>
+            <a href="mailto:aryan.sinha@email.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hero-image reveal-right">
+          <div class="profile-wrapper">
+            <div class="profile-ring"></div>
+            <div class="profile-ring profile-ring-2"></div>
+            <img src="profile.jpg"
+                 alt="Aryan Sinha Profile"
+                 class="profile-img">
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-down" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Get To Know Me</span>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal-left">
+            <p>I am a Computer Science student pursuing B.Tech with a strong interest in software development, database management systems, and modern web technologies.</p>
+            <p>I enjoy designing scalable applications, solving challenging programming problems, and working on projects that solve real-world issues.</p>
+            <p>My areas of interest include Full Stack Development, Database Management Systems, Data Structures & Algorithms, Artificial Intelligence, and IoT-based solutions.</p>
+            <p>I continuously learn new technologies and improve my technical skills through hands-on projects and coding practice.</p>
+          </div>
+          <div class="about-cards reveal-right">
+            <div class="glass-card stat-card">
+              <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+              <h3>Experience</h3>
+              <p>Academic & Personal Projects</p>
+            </div>
+            <div class="glass-card stat-card">
+              <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+              <h3>Education</h3>
+              <p>B.Tech in CSE — 5th Semester[Currently]</p>
+            </div>
+            <div class="glass-card stat-card">
+              <div class="stat-icon"><i class="fas fa-laptop-code"></i></div>
+              <h3>Projects Completed</h3>
+              <p>Multiple Full Stack Applications</p>
+            </div>
+            <div class="glass-card stat-card">
+              <div class="stat-icon"><i class="fas fa-tools"></i></div>
+              <h3>Technologies Learned</h3>
+              <p>15+ Tools & Frameworks</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education section" id="education">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">My Journey</span>
+          <h2 class="section-title"><span class="gradient-text">Education</span></h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item reveal-left">
+            <div class="timeline-dot"></div>
+            <div class="glass-card timeline-card">
+              <span class="timeline-badge">Current</span>
+              <h3>B.Tech in Computer Science and Engineering</h3>
+              <p class="timeline-institution"><i class="fas fa-university"></i> SRM Institute of Science and Technology</p>
+              <ul class="timeline-details">
+                <li><strong>Status:</strong> Pursuing</li>
+                <li><strong>Semester:</strong> 5th Semester</li>
+                <li><strong>Expected Graduation:</strong> 2028</li>
+                <li><strong>CGPA:</strong> 9.80</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item reveal-right">
+            <div class="timeline-dot"></div>
+            <div class="glass-card timeline-card">
+              <h3>Class 12</h3>
+              <p class="timeline-institution"><i class="fas fa-school"></i> SRI CHAITANYA JUNIOR COLLEGE</p>
+              <ul class="timeline-details">
+                <li><strong>Board:</strong> TELANGANA STATE BOARD</li>
+                <li><strong>Year:</strong> 2024</li>
+                <li><strong>Percentage:</strong> 95.9%</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item reveal-left">
+            <div class="timeline-dot"></div>
+            <div class="glass-card timeline-card">
+              <h3>Class 10</h3>
+              <p class="timeline-institution"><i class="fas fa-school"></i> SRI CHAITANYA HIGH SCHOOL</p>
+              <ul class="timeline-details">
+                <li><strong>Board:</strong> CBSE</li>
+                <li><strong>Year:</strong> 2022</li>
+                <li><strong>Percentage:</strong> 90.2%</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">What I Know</span>
+          <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+        </div>
+        <div class="skills-grid">
+          <div class="glass-card skill-category reveal">
+            <h3><i class="fas fa-code"></i> Programming Languages</h3>
+            <div class="skill-item">
+              <div class="skill-info"><span>C Language</span><span>82%</span></div>
+              <div class="progress-bar"><div class="progress-fill" data-progress="82"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>C++</span><span>85%</span></div>
+              <div class="progress-bar"><div class="progress-fill" data-progress="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Java</span><span>80%</span></div>
+              <div class="progress-bar"><div class="progress-fill" data-progress="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>JavaScript</span><span>88%</span></div>
+              <div class="progress-bar"><div class="progress-fill" data-progress="88"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>SQL</span><span>82%</span></div>
+              <div class="progress-bar"><div class="progress-fill" data-progress="82"></div></div>
+            </div>
+          </div>
+          <div class="glass-card skill-category reveal">
+            <h3><i class="fas fa-paint-brush"></i> Frontend</h3>
+            <div class="skill-item">
+              <div class="skill-info"><span>HTML</span><span>92%</span></div>
+              <div class="progress-bar"><div class="progress-fill" data-progress="92"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>CSS</span><span>90%</span></div>
+              <div class="progress-bar"><div class="progress-fill" data-progress="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>JavaScript</span><span>88%</span></div>
+              <div class="progress-bar"><div class="progress-fill" data-progress="88"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>React.js</span><span>70%</span></div>
+              <div class="progress-bar"><div class="progress-fill" data-progress="70"></div></div>
+            </div>
+            
+          </div>
+          <div class="glass-card skill-category reveal">
+            <h3><i class="fas fa-server"></i> Backend</h3>
+            <div class="skill-item">
+              <div class="skill-info"><span></span><span>78%</span></div>
+              <div class="progress-bar"><div class="progress-fill" data-progress="78"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span></span><span>75%</span></div>
+              <div class="progress-bar"><div class="progress-fill" data-progress="75"></div></div>
+            </div>
+          </div>
+          <div class="glass-card skill-category reveal">
+            <h3><i class="fas fa-database"></i> Database</h3>
+            <div class="skill-item">
+              <div class="skill-info"><span>MySQL</span><span>85%</span></div>
+              <div class="progress-bar"><div class="progress-fill" data-progress="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>DBMS</span><span>88%</span></div>
+              <div class="progress-bar"><div class="progress-fill" data-progress="88"></div></div>
+            </div>
+          </div>
+          <div class="glass-card skill-category reveal">
+            <h3><i class="fas fa-wrench"></i> Tools</h3>
+            <div class="skill-item">
+              <div class="skill-info"><span>Git</span><span>80%</span></div>
+              <div class="progress-bar"><div class="progress-fill" data-progress="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>GitHub</span><span>85%</span></div>
+              <div class="progress-bar"><div class="progress-fill" data-progress="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>VS Code</span><span>90%</span></div>
+              <div class="progress-bar"><div class="progress-fill" data-progress="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>MySQL Workbench</span><span>82%</span></div>
+              <div class="progress-bar"><div class="progress-fill" data-progress="82"></div></div>
+            </div>
+          </div>
+          <div class="glass-card skill-category reveal">
+            <h3><i class="fas fa-users"></i> Soft Skills</h3>
+            <div class="skill-item">
+              <div class="skill-info"><span>Problem Solving</span><span>90%</span></div>
+              <div class="progress-bar"><div class="progress-fill" data-progress="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Teamwork</span><span>85%</span></div>
+              <div class="progress-bar"><div class="progress-fill" data-progress="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Communication</span><span>75%</span></div>
+              <div class="progress-bar"><div class="progress-fill" data-progress="75"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Leadership</span><span>90%</span></div>
+              <div class="progress-bar"><div class="progress-fill" data-progress="90"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">My Work</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        </div>
+        <div class="projects-grid">
+          <article class="glass-card project-card reveal">
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=350&fit=crop" alt="College Database Management System">
+              <div class="project-overlay">
+                <a href="#" class="project-overlay-link"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Centralized College Database Management System</h3>
+              <p>A full-stack college management system designed to manage students, faculty, departments, courses, subjects, hostels, and examinations through a centralized database.</p>
+              <div class="project-tags">
+                <span>React.js</span>
+                <span>Next.js</span>
+                <span>Express.js</span>
+                <span>MySQL</span>
+              </div>
+              <ul class="project-features">
+                <li><i class="fas fa-check"></i> CRUD Operations</li>
+                <li><i class="fas fa-check"></i> Student Management</li>
+                <li><i class="fas fa-check"></i> Faculty Management</li>
+                <li><i class="fas fa-check"></i> Hostel Management</li>
+                <li><i class="fas fa-check"></i> Database Integration</li>
+              </ul>
+              <div class="project-buttons">
+                <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-eye"></i> View Project</a>
+                <a href="#" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> GitHub Repository</a>
+              </div>
+            </div>
+          </article>
+          <article class="glass-card project-card reveal">
+            <div class="project-image">
+              <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR0d4HwUViUPUAIlp23EGjgWKY2fqBVVzNUlfqZwjTYlwRyLkNaZPexs7Y4yJ5s7MsnIKXTZnLVrX9pmD8DPg12LFLgptnAcFQA3fBWSny9XxAM-YSeEhwN" alt="CLEANSENSE Smart Dustbin">
+              <div class="project-overlay">
+                <a href="#" class="project-overlay-link"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>CLEANSENSE – Smart Dustbin</h3>
+              <p>An IoT-based smart waste segregation system that automatically separates wet and dry waste using sensors.</p>
+              <div class="project-tags">
+                <span>IoT</span>
+                <span>Arduino</span>
+                <span>Sensors</span>
+              </div>
+              <ul class="project-features">
+                <li><i class="fas fa-check"></i> Automatic Waste Segregation</li>
+                <li><i class="fas fa-check"></i> Moisture Detection</li>
+                <li><i class="fas fa-check"></i> Rotor Mechanism</li>
+                <li><i class="fas fa-check"></i> Smart Waste Monitoring</li>
+              </ul>
+              <div class="project-buttons">
+                <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-eye"></i> View Project</a>
+                <a href="#" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> GitHub Repository</a>
+              </div>
+            </div>
+          </article>
+          <article class="glass-card project-card reveal project-placeholder">
+            <div class="project-image placeholder-img">
+              <div class="placeholder-content">
+                <i class="fas fa-plus-circle"></i>
+                <p>Coming Soon</p>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Future Project</h3>
+              <p>An exciting new project is in the works. Stay tuned for updates on my latest innovation in software development.</p>
+              <div class="project-tags">
+                <span>TBD</span>
+              </div>
+              <div class="project-buttons">
+                <a href="#" class="btn btn-outline btn-sm disabled"><i class="fas fa-clock"></i> Coming Soon</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements section" id="achievements">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Milestones</span>
+          <h2 class="section-title">My <span class="gradient-text">Achievements</span></h2>
+        </div>
+        <div class="achievements-grid">
+          <div class="glass-card achievement-card reveal">
+            <div class="achievement-icon"><i class="fas fa-brain"></i></div>
+            <h3 class="counter" data-target="100">0</h3>
+            <p>Solved 100+ DSA Problems</p>
+          </div>
+          <div class="glass-card achievement-card reveal">
+            <div class="achievement-icon"><i class="fas fa-layer-group"></i></div>
+            <h3 class="counter" data-target="5">0</h3>
+            <p>Built Multiple Full Stack Projects</p>
+          </div>
+          <div class="glass-card achievement-card reveal">
+            <div class="achievement-icon"><i class="fas fa-database"></i></div>
+            <h3 class="counter" data-target="100">0</h3>
+            <p>Strong Foundation in DBMS</p>
+          </div>
+          <div class="glass-card achievement-card reveal">
+            <div class="achievement-icon"><i class="fas fa-robot"></i></div>
+            <h3 class="counter" data-target="15">0</h3>
+            <p>Active Learner in AI & Web Development</p>
+          </div>
+          <div class="glass-card achievement-card reveal">
+            <div class="achievement-icon"><i class="fas fa-certificate"></i></div>
+            <h3 class="counter" data-target="3">0</h3>
+            <p>Completed Technical Certifications</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications section" id="certifications">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Credentials</span>
+          <h2 class="section-title"><span class="gradient-text">Certifications</span></h2>
+        </div>
+        <div class="cert-grid">
+          <div class="glass-card cert-card reveal">
+            <div class="cert-badge"><i class="fas fa-award"></i></div>
+            <h3>[Programming in Java]</h3>
+            <p class="cert-org"><i class="fas fa-building"></i> SWAYAM NPTEL-IIT KGP</p>
+            <p class="cert-date"><i class="fas fa-calendar"></i> 90% [GOLD + ELITE] </p>
+            <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+          </div>
+          <div class="glass-card cert-card reveal">
+            <div class="cert-badge"><i class="fas fa-award"></i></div>
+            <h3>[Coursera Certification Name]</h3>
+            <p class="cert-org"><i class="fas fa-building"></i> Coursera</p>
+            <p class="cert-date"><i class="fas fa-calendar"></i> [Date]</p>
+            <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+          </div>
+          <div class="glass-card cert-card reveal">
+            <div class="cert-badge"><i class="fas fa-award"></i></div>
+            <h3>[DATABASE MANAGEMENT SYSTEM]</h3>
+            <p class="cert-org"><i class="fas fa-building"></i> SWAYAM NPTEL-IIT KGP</p>
+            <p class="cert-date"><i class="fas fa-calendar"></i> 67% [ELITE]</p>
+            <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="resume section" id="resume">
+      <div class="container">
+        <div class="glass-card resume-card reveal">
+          <div class="resume-icon"><i class="fas fa-file-alt"></i></div>
+          <h2>Download My Resume</h2>
+          <p>Explore my academic achievements, technical skills, projects, and experiences.</p>
+          <a href="resume.pdf" class="btn btn-primary btn-lg" download>
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+        </div>
+        <div class="contact-grid">
+          <form class="glass-card contact-form reveal-left" id="contactForm">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Your Full Name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Subject of your message" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+          <div class="contact-info reveal-right">
+            <div class="glass-card contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>Email</h4>
+                <p>aryansinha0216@gmail.com</p>
+              </div>
+            </div>
+            <div class="glass-card contact-item">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <h4>Phone Number</h4>
+                <p>+91 76330 65267</p>
+              </div>
+            </div>
+            <div class="glass-card contact-item">
+              <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div>
+                <h4>LinkedIn</h4>
+                <p>https://www.linkedin.com/in/aryan-sinha-250ab936b/</p>
+              </div>
+            </div>
+            <div class="glass-card contact-item">
+              <div class="contact-icon"><i class="fab fa-github"></i></div>
+              <div>
+                <h4>GitHub</h4>
+                <p>https://github.com/AryanSinha007</p>
+              </div>
+            </div>
+            <div class="glass-card contact-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <h4>Location</h4>
+                <p>[Chennai, Tamil Nadu, India]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <h3>Aryan Sinha</h3>
+        <p>Building solutions through code and creativity.</p>
+        <div class="footer-social">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://leetcode.com/" target=https://leetcode.com/u/aryan_sinha_07/ rel="noopener noreferrer" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+          <a href="mailto:aryan.sinha@email.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Aryan Sinha. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
